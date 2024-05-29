@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Comparison</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Log Comparison Tool</h1>
+        <form id="logForm">
+            <label for="log1">Log 1:</label>
+            <textarea id="log1" name="log1" rows="10" required></textarea>
+            <label for="log2">Log 2:</label>
+            <textarea id="log2" name="log2" rows="10" required></textarea>
+            <button type="submit">Compare Logs</button>
+        </form>
+        <div id="results">
+            <h2>Comparison Results</h2>
+            <div id="log1-results">
+                <h3>Log 1 Results</h3>
+                <p id="log1-warnings">Warnings: 0</p>
+                <p id="log1-errors">Errors: 0</p>
+                <ul id="log1-unique-warnings"></ul>
+                <ul id="log1-unique-errors"></ul>
+            </div>
+            <div id="log2-results">
+                <h3>Log 2 Results</h3>
+                <p id="log2-warnings">Warnings: 0</p>
+                <p id="log2-errors">Errors: 0</p>
+                <ul id="log2-unique-warnings"></ul>
+                <ul id="log2-unique-errors"></ul>
+            </div>
+            <div id="differences">
+                <h3>Differences in Logs</h3>
+                <p>Warnings in Log 1 but not in Log 2:</p>
+                <ul id="unique-log1-warnings"></ul>
+                <p>Warnings in Log 2 but not in Log 1:</p>
+                <ul id="unique-log2-warnings"></ul>
+                <p>Errors in Log 1 but not in Log 2:</p>
+                <ul id="unique-log1-errors"></ul>
+                <p>Errors in Log 2 but not in Log 1:</p>
+                <ul id="unique-log2-errors"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
